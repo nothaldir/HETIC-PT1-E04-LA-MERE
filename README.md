@@ -2,9 +2,17 @@
 
 > A Vue.js project
 
+## Requirements
+Node js > 5.4.4
+
 ## Build Setup
 
+
 ``` bash
+# clone repository
+git clone https://github.com/nothaldir/PT1-E04-LA-MERE
+cd PT1-E04-LA-MERE
+
 # install dependencies
 npm install
 
@@ -14,5 +22,3 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
