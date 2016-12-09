@@ -24,7 +24,7 @@ module.exports = {
       'js': 'never',
       'vue': 'never'
     }],
-    'linebreak-style': ['error', process.env.NODE_ENV === 'prod' ? 'unix' : 'windows'],
+    'linebreak-style': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
