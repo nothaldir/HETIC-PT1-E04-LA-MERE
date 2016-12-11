@@ -5,7 +5,7 @@ import Testimonials from './pages/Testimonials'
 const routes = [
   { path: '/', component: Homepage },
   { path: '/bar', component: Bar },
-  { path: '/Testimonials', component: Testimonials },
+  { path: '/testimonials', component: Testimonials },
 ]
 
 export default routes

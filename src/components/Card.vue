@@ -23,16 +23,20 @@ export default {
 
 <style scoped>
   .container {
-    max-width: 10rem;
-    overflow: hidden;
+    min-width: 20rem;
+    max-width: 20rem;
+    position: relative;
+    margin: 1.5rem;
   }
   .cover {
     background-size: cover;
-    width: 10rem;
-    height: 10rem;
+    width: 100%;
+    height: 20rem;
   }
   .description {
     background-color: #FCCE72;
+    text-align: left;
+    padding: 0.8rem;
   }
   .title {
     color: white;
