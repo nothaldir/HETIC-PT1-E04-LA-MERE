@@ -3,6 +3,7 @@
     <router-link class="link" to="/">Homepage</router-link>
     <router-link class="link" to="/Bar">Bar</router-link>
     <router-link class="link" to="/Testimonials">Testimonials</router-link>
+    <router-link class="link" to="/Testimonial">Testimonial | Dorian</router-link>
   </nav>
 </template>
 
@@ -27,6 +28,6 @@ export default {
   transition: all .3s ease;
 }
 .link:hover {
-  opacity: .7;
+  opacity: .4;
 }
 </style>
