@@ -27,32 +27,32 @@ export default {
   data: () => ({
     couples: [
       {
-        name: 'Paul et Henry',
+        name: 'Paul et Henri',
         location: 'France',
         img: 'paul_henri.png',
       },
       {
-        name: 'Paul et Henry',
+        name: 'Paul et Henri',
         location: 'France',
         img: 'paul_henri.png',
       },
       {
-        name: 'Paul et Henry',
+        name: 'Paul et Henri',
         location: 'France',
         img: 'paul_henri.png',
       },
       {
-        name: 'Paul et Henry',
+        name: 'Paul et Henri',
         location: 'France',
         img: 'paul_henri.png',
       },
       {
-        name: 'Paul et Henry',
+        name: 'Paul et Henri',
         location: 'France',
         img: 'paul_henri.png',
       },
       {
-        name: 'Paul et Henry',
+        name: 'Paul et Henri',
         location: 'France',
         img: 'paul_henri.png',
       },
