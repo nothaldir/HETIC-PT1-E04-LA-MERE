@@ -1,11 +1,10 @@
 <template>
   <transition name="fade">
     <div class="homepage">
-      <h1>Testimonials</h1>
+      <h1>DÉCOUVREZ LES TÉMOIGNAGES DE COUPLES HOMOPARENTAUX</h1>
       <div class="couples">
         <Card class="couple" v-for="couple in couples" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
       </div>
-    </div>
   </transition>
 </template>
 
