@@ -68,12 +68,23 @@ export default {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+h1 {
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  margin-top: 40px;
+  width: 36rem;
+  font-size: 26px;
+  color: #FCCE72;
+}
+
 .couples {
   display: flex;
-  flex-direction: row;
-}
-.couple {
-
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 70rem;
+  margin: auto;
 }
 
 </style>
