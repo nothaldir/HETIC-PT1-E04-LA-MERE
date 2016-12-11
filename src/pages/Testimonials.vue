@@ -2,8 +2,8 @@
   <transition name="fade">
     <div class="homepage">
       <h1>Testimonials</h1>
-      <div class="">
-        <Card v-for="couple in couples" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
+      <div class="couples">
+        <Card class="couple" v-for="couple in couples" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
       </div>
     </div>
   </transition>
@@ -61,12 +61,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
 }
 .fade-enter, .fade-leave-active {
   opacity: 0
+}
+.couples {
+  display: flex;
+  flex-direction: row;
+}
+.couple {
+
 }
 
 </style>

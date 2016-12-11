@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <p>
-      <router-link to="/">Go to Homepage</router-link>
-      <router-link to="/Bar">Go to Bar</router-link>
-      <router-link to="/Testimonials">Go to Testimonials</router-link>
-    </p>
+    <Nav />
     <router-view></router-view>
-</div>
+  </div>
 </template>
 
 <script>
+import Nav from './components/Nav'
+
 export default {
   name: 'app',
   components: {
+    Nav,
   },
 }
 </script>
@@ -24,6 +23,5 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
 </style>
