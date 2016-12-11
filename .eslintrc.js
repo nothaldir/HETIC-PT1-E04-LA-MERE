@@ -25,6 +25,7 @@ module.exports = {
       'vue': 'never'
     }],
     'linebreak-style': 0,
+    'semi': [2, 'never'],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
