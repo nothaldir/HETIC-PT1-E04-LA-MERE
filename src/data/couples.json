@@ -1,10 +1,34 @@
 [{
-  "name": "Dorian et Ulysse",
-  "slug": "paul_henri",
+  "name": "Anne et Isabelle",
+  "slug": "anne_isabelle",
   "location": "France",
-  "img": "paul_henri.png",
+  "img": "anne_isabelle_famille_homoparentale.png",
   "video": "anne_isabelle_interview_famille_homoparentale",
   "history": "Anne et Isabelle vivent en couple depuis vingt ans et élèvent ensemble Aglaé, leur fille de 4 ans. Elles ont attendu 16 ans avant d’avoir leur fille, en procédant par une procréation médicalement assistée à Bruxelles. Elles ont eu leur bébé en Belgique 9 mois plus tard. A ce moment-là, la Belgique permettait aux deux membres des familles homoparentales de reconnaître le bébé, que le couple soit Belge ou d’origine d’un pays frontalier. Elles sont particulièrement exigeantes avec leur fille car elles veulent éviter tout reproche envers l’éducation d’Aglaé que d’autres expliqueraient par le choix de leur orientation sexuelle.",
   "numbers": "- 7 novembre 2012 : Projet de loi <br>- 23 avril 2013: Adoption du projet de loi par l’ Assemblée Nationale <br>- 17 mai 2013: Loi ouvrant le mariage aux couples homosexuels <br>- 29 mai 2013: 1e r mariage homosexuel à Montpellier ",
   "law": "Avec la loi du 17 mai 2013 sur le mariage pour tous, la France est devenue le 9e pays européen et le 14e pays au monde à autoriser le mariage homosexuel. Cette loi a ouvert de nouveaux droits pour le mariage, l'adoption et la succession, au nom des principes d’égalité et de partage des libertés. En 2014, les mariages de couples de même sexe ont représenté 4% du total des unions."
-}]
+},
+
+{
+  "name": "Emmet et Gabriel",
+  "slug": "emmet_gabriel",
+  "location": "Etats-Unis",
+  "img": "emmet_gabriel_famille_homoparentale_usa.png",
+  "video": "emmet_gabriel_interview_famille_homoparentale_usa",
+  "history": "Emmet et Gabriel, des jumeaux de 4 ans sont un cas assez typique Ils aiment jouer dehors. Ils aiment les puzzles et les petites voitures. Et ils sont curieux de nouveaux gadgets. Ils aiment également faire des câlins à leurs parents et parfois, ils ont besoin de plus d’attention. Emmet et Gabriel ont des parents assez vieux-jeu, qui se sont mariés avant d’emménager ensemble, ont essayé d’aller à l’église tous les dimanches, qui ont essayé et qui ont toujours voulu des enfants, qui se partagent les tâches ménagères et la vaisselles, qui couchent leurs enfants à 20h tous les soirs. Sauf que leurs parents, Paul Melchert and James Zimmerman… sont gays.",
+  "numbers": "- 17 mai 2004 : Le Massachussetts adopte la loi permettant le mariage homosexuel. C’est le premier état des états-unis à l’autoriser <br>- 15 mai 2008 : les habitants de l’état de Californie vote pour le mariage de personnes du même sexe. Ce vote entraîne les autres états à considérer la question. <br>- 1er janvier 2014 : 23 états autorisent le mariage gay <br>- 26 juin : arrêt rendu par la Cour Suprême des Etats-Unis, légalisant le mariage gay dans tous les Etats-Unis",
+  "law": "Le successeur de George W. Bush, le démocrate Barack Obama, a affirmé durant la campagne électorale de 2008 que les couples homosexuels méritaient les mêmes droits que les autres couples et se déclarait favorable aux unions civiles homosexuelles mais pas au mariage homosexuel. Il affirma en 2010 que sa position évoluait « constamment » sur ce sujet. Le vice-président des États-Unis, Joe Biden, considère de son côté qu'un consensus national permettant d'aboutir au mariage homosexuel est « inévitable ». La Maison blanche est alors cependant plutôt favorable à l'établissement d'une union civile spécifique aux homosexuels, ouvrant les mêmes droits que le mariage mais distincte du mariage, sur le modèle britannique tel qu'il se présente à ce jour. Le 9 mai 2012, dans un entretien pour la chaîne ABC News, Barack Obama prend finalement position en faveur du mariage homosexuel."
+},
+
+{
+  "name": "Christina et Karina",
+  "slug": "christina_karina",
+  "location": "Suède",
+  "img": "christina_karina_famille_homoparentale_suede.png",
+  "video": "christina_karina_interview_famille_homoparentale_suede",
+  "history": "C'est un prof de fitness aux Etats-UNis qui donna à ce couple gay l'idée de congeler les oeufs de Karina. Bien que ce processus soit facile, il est illégal en Suède pour une personne de porter les oeufs de sa partenaire - ce que ces deux femmes souhaitaient pourtant faire. Voyageant aux Etats-Unis, leur première fécondation in vitro a donné naissance à leur fille, Bonnie. Depuis deux ans, elles essayent de nouveau de donner un frère ou une soeur à Bonnie.",
+  "numbers": "",
+  "law": ""
+}
+
+]
