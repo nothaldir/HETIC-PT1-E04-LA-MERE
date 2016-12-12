@@ -1,38 +1,35 @@
-[
-  {
-    "name": "Paul et Henri",
-    "slug": "paul_henri",
-    "location": "France",
-    "img": "paul_henri.png"
-  },
-  {
-    "name": "Paul et Henri",
-    "slug": "paul_henri",
-    "location": "France",
-    "img": "paul_henri.png"
-  },
-  {
-    "name": "Paul et Henri",
-    "slug": "paul_henri",
-    "location": "France",
-    "img": "paul_henri.png"
-  },
-  {
-    "name": "Paul et Henri",
-    "slug": "paul_henri",
-    "location": "France",
-    "img": "paul_henri.png"
-  },
-  {
-    "name": "Paul et Henri",
-    "slug": "paul_henri",
-    "location": "France",
-    "img": "paul_henri.png"
-  },
-  {
-    "name": "Paul et Henri",
-    "slug": "paul_henri",
-    "location": "France",
-    "img": "paul_henri.png"
-  }
-]
+[{
+  "name": "Anne et Isabelle",
+  "slug": "anne_isabelle",
+  "location": "France",
+  "img": "anne_isabelle.png",
+  "video": "anne_isabelle_interview_famille_homoparentale",
+  "history": "Anne et Isabelle vivent en couple depuis vingt ans et élèvent ensemble Aglaé, leur fille de 4 ans. Elles ont attendu 16 ans avant d’avoir leur fille, en procédant par une procréation médicalement assistée à Bruxelles. Elles ont eu leur bébé en Belgique 9 mois plus tard. A ce moment-là, la Belgique permettait aux deux membres des familles homoparentales de reconnaître le bébé, que le couple soit Belge ou d’origine d’un pays frontalier. Elles sont particulièrement exigeantes avec leur fille car elles veulent éviter tout reproche envers l’éducation d’Aglaé que d’autres expliqueraient par le choix de leur orientation sexuelle.",
+  "numbers": "- 7 novembre 2012 : Projet de loi - 23 avril 2013: Adoption du projet de loi par l’ Assemblée Nationale -17 mai 2013: Loi ouvrant le mariage aux couples homosexuels -29 mai 2013: 1e r mariage homosexuel à Montpellier ",
+  "law": "Avec la loi du 17 mai 2013 sur le mariage pour tous, la France est devenue le 9e pays européen et le 14e pays au monde à autoriser le mariage homosexuel. Cette loi a ouvert de nouveaux droits pour le mariage, l'adoption et la succession, au nom des principes d’égalité et de partage des libertés. En 2014, les mariages de couples de même sexe ont représenté 4% du total des unions."
+}, {
+  "name": "Paul et Henri",
+  "slug": "paul_henri",
+  "location": "France",
+  "img": "paul_henri.png"
+}, {
+  "name": "Paul et Henri",
+  "slug": "paul_henri",
+  "location": "France",
+  "img": "paul_henri.png"
+}, {
+  "name": "Paul et Henri",
+  "slug": "paul_henri",
+  "location": "France",
+  "img": "paul_henri.png"
+}, {
+  "name": "Paul et Henri",
+  "slug": "paul_henri",
+  "location": "France",
+  "img": "paul_henri.png"
+}, {
+  "name": "Paul et Henri",
+  "slug": "paul_henri",
+  "location": "France",
+  "img": "paul_henri.png"
+}]
