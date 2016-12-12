@@ -7,6 +7,11 @@
       <div class="testimonial__text">
         <div class="testimonial-subtitle">Leur histoire</div>
         <p>{{ couple.history }}</p>
+    </div>
+    <div class="testimonial-bar">
+      <div class="testimonial-infos testimonial-bar-text">L'homoparentalité <div>en {{ couple.location }}</div></div>
+    </div>
+      <div class="testimonial__text">
         <div class="testimonial-subtitle">Les chiffres</div>
         <p v-html="couple.numbers"></p>
         <div class="testimonial-subtitle">Les lois</div>
@@ -43,6 +48,18 @@ export default {
 
   .testimonial-title {
     font-weight: bolder;
+  }
+
+  .testimonial-bar {
+    background-color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-bar-text {
+    text-align:center;
+    color: white;
+    font-weight: bolder;
+    padding: 15px 0;
   }
 
   .testimonial-infos {
