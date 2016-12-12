@@ -1,8 +1,18 @@
 <template>
   <transition name="fade">
     <div class="testimonial">
-      <p>{{ $route.params.id }}</p>
-      <p> {{ couple.name}}</p>
+      <div class="testimonial-title testimonial-infos">Témoignage</div>
+      <div class="testimonial-infos">{{ couple.name }}</div>
+      <div class="testimonial-infos">{{ couple.location }}</div>
+      <div class="testimonial__text">
+        <div class="testimonial-subtitle">Leur histoire</div>
+        <p>{{ couple.history }}</p>
+        <div class="testimonial-subtitle">Les chiffres</div>
+        <p v-html="couple.numbers"></p>
+        <div class="testimonial-subtitle">Les lois</div>
+        <p>{{ couple.law }}</p>
+        <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
+      </div>
     </div>
   </transition>
 </template>
@@ -24,15 +34,29 @@ export default {
 }
 </script>
 
-<style>
-  .fade-enter-active, .fade-leave-active {
-    transition: all .5s
-  }
-  .fade-enter, .fade-leave-active {
-    transform: rotate(-170deg);
-    transform-origin: bottom;
-  }
+<style lang="scss">
+@import '../variables.scss';
+
   .testimonial {
-    background-color: red;
+    text-align: initial;
+  }
+
+  .testimonial-title {
+    font-weight: bolder;
+  }
+
+  .testimonial-infos {
+    text-transform: uppercase;
+  }
+
+  .testimonial-subtitle {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: $primary-color;
+  }
+
+  .testimonial__text {
+    max-width: 56rem;
+    margin: auto;
   }
 </style>

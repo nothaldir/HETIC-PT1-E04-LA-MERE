@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div class="homepage">
-      <h1>DÉCOUV  REZ LES TÉMOIGNAGES DE COUPLES HOMOPARENTAUX</h1>
+      <h1>DÉCOUVREZ LES TÉMOIGNAGES DE COUPLES HOMOPARENTAUX</h1>
       <div class="couples">
         <router-link class="link" v-for="couple in couples" v-bind:to="'/testimonials/' + couple.slug">
           <Card class="couple" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
@@ -35,13 +35,6 @@ export default {
 <style scoped lang="scss">
   @import '../variables.scss';
 
-  .fade-enter-active, .fade-leave-active {
-    transition: all .5s
-  }
-  .fade-enter, .fade-leave-active {
-    transform: rotate(-170deg);
-    transform-origin: bottom;
-  }
   h1 {
     width: 100%;
     height: 100px;
