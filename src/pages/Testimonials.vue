@@ -36,10 +36,11 @@ export default {
   @import '../variables.scss';
 
   .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s
+    transition: all .5s
   }
   .fade-enter, .fade-leave-active {
-    opacity: 0
+    transform: rotate(-170deg);
+    transform-origin: bottom;
   }
   h1 {
     width: 100%;
