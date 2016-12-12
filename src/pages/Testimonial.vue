@@ -4,6 +4,10 @@
   </div>
 </template>
 <script>
+import couples from '../data/couples.json'
+
+/* eslint-disable */
+console.log(couples)
 export default {
   name: 'testimonial',
   head: {
