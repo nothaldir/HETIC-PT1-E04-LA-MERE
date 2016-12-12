@@ -1,9 +1,11 @@
 <template>
   <transition name="fade">
     <div class="homepage">
-      <h1>DÉCOUVREZ LES TÉMOIGNAGES DE COUPLES HOMOPARENTAUX</h1>
+      <h1>DÉCOUV  REZ LES TÉMOIGNAGES DE COUPLES HOMOPARENTAUX</h1>
       <div class="couples">
-        <Card class="couple" v-for="couple in couples" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
+        <router-link class="link" v-for="couple in couples" v-bind:to="'/testimonials/' + couple.slug">
+          <Card class="couple" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
+        </router-link>
       </div>
   </transition>
 </template>
@@ -11,6 +13,7 @@
 <script>
 import store from '../store'
 import Card from '../components/Card'
+import couples from '../data/couples.json'
 
 export default {
   name: 'testimonials',
@@ -24,66 +27,39 @@ export default {
     Card,
   },
   data: () => ({
-    couples: [
-      {
-        name: 'Paul et Henri',
-        location: 'France',
-        img: 'paul_henri.png',
-      },
-      {
-        name: 'Paul et Henri',
-        location: 'France',
-        img: 'paul_henri.png',
-      },
-      {
-        name: 'Paul et Henri',
-        location: 'France',
-        img: 'paul_henri.png',
-      },
-      {
-        name: 'Paul et Henri',
-        location: 'France',
-        img: 'paul_henri.png',
-      },
-      {
-        name: 'Paul et Henri',
-        location: 'France',
-        img: 'paul_henri.png',
-      },
-      {
-        name: 'Paul et Henri',
-        location: 'France',
-        img: 'paul_henri.png',
-      },
-    ],
+    couples,
   }),
 }
 </script>
 
-<style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
-h1 {
-  width: 100%;
-  height: 100px;
-  margin: auto;
-  margin-top: 40px;
-  width: 36rem;
-  font-size: 26px;
-  color: #FCCE72;
-}
+<style scoped lang="scss">
+  @import '../variables.scss';
 
-.couples {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 70rem;
-  margin: auto;
-}
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+  h1 {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    margin-top: 40px;
+    width: 36rem;
+    font-size: 26px;
+    color: $primary-color;
+  }
+  .link {
+    text-decoration: none;
+  }
 
+  .couples {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 70rem;
+    margin: auto;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="testimonial">
-    <p>Ton code ici</p>
+    <p>{{ $route.params.id }}</p>
   </div>
 </template>
 <script>

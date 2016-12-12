@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav class="nav-bar">
     <router-link class="link" to="/">Homepage</router-link>
     <router-link class="link" to="/Bar">Bar</router-link>
     <router-link class="link" to="/Testimonials">Testimonials</router-link>
@@ -9,25 +9,27 @@
 
 <script>
 export default {
-  name: 'nav',
+  name: 'nav-bar',
 }
 </script>
 
-<style>
-.nav {
+<style lang="scss" scoped>
+@import '../variables.scss';
+.nav-bar {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   width: 100vw;
-}
-.link {
-  text-decoration: none;
-  color: black;
-  margin-left: 1rem;
-  padding: 1rem 0;
-  transition: all .3s ease;
-}
-.link:hover {
-  opacity: .4;
+  .link {
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+    padding: 1rem 0;
+    transition: all .3s ease;
+    &:hover {
+      opacity: .4;
+      color: $primary-color;
+    }
+  }
 }
 </style>

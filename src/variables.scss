@@ -1,0 +1,20 @@
+$primary-color: #FCCE72;
+
+@mixin respond-to($breakpoint){
+  @if type-of($breakpoint) == 'string' {
+    @if map-has-key($breakpoints, $breakpoint) {
+      $breakpoint : inspect(map-get($breakpoints, $breakpoint));
+      @media only screen and (min-width: $breakpoint) {
+        @content;
+      }
+    }
+    @else {
+      @error 'No value found for `#{$breakpoint}`. ';
+    }
+  }
+  @else{
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}

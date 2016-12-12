@@ -21,7 +21,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import '../variables.scss';
   .container {
     min-width: 20rem;
     max-width: 20rem;
@@ -34,15 +35,15 @@ export default {
     height: 20rem;
   }
   .description {
-    background-color: #FCCE72;
+    background-color: $primary-color;
     text-align: left;
     padding: 0.8rem;
   }
   .title {
+    color: red;
     color: white;
   }
   .subtitle {
     color: white;
   }
-
 </style>
