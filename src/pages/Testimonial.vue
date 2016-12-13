@@ -1,31 +1,28 @@
 <template>
-  <transition name="fade">
-    <div class="testimonial">
-      <div class="testimonial-title testimonial-infos">Témoignage</div>
-      <div class="testimonial-infos">{{ couple.name }}</div>
-      <div class="testimonial-infos">{{ couple.location }}</div>
-      <div class="testimonial__text">
-        <div class="testimonial-subtitle">Leur histoire</div>
-        <p>{{ couple.history }}</p>
+  <div class="testimonial">
+    <div class="testimonial-title testimonial-infos">Témoignage</div>
+    <div class="testimonial-infos">{{ couple.name }}</div>
+    <div class="testimonial-infos">{{ couple.location }}</div>
+    <div class="testimonial__text">
+      <div class="testimonial-subtitle">Leur histoire</div>
+      <p>{{ couple.history }}</p>
+  </div>
+  <div class="testimonial-bar">
+    <div class="testimonial-infos testimonial-bar-text">L'homoparentalité <div>en {{ couple.location }}</div></div>
+  </div>
+    <div class="testimonial__text">
+      <div class="testimonial-subtitle">Les chiffres</div>
+      <p v-html="couple.numbers"></p>
+      <div class="testimonial-subtitle">Les lois</div>
+      <p>{{ couple.law }}</p>
+      <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
     </div>
-    <div class="testimonial-bar">
-      <div class="testimonial-infos testimonial-bar-text">L'homoparentalité <div>en {{ couple.location }}</div></div>
-    </div>
-      <div class="testimonial__text">
-        <div class="testimonial-subtitle">Les chiffres</div>
-        <p v-html="couple.numbers"></p>
-        <div class="testimonial-subtitle">Les lois</div>
-        <p>{{ couple.law }}</p>
-        <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
-      </div>
-    </div>
-  </transition>
+  </div>
 </template>
 <script>
 import couples from '../data/couples.json'
 
-/* eslint-disable */
-console.log(this);
+// console.log(this)
 export default {
   name: 'testimonial',
   head: {
@@ -33,9 +30,9 @@ export default {
       inner: 'Testimonial',
     },
   },
-  created: function() {
-    this.couple = couples.find((item) => item.slug === this.$route.params.id)
-  }
+  created() {
+    this.couple = couples.find(item => item.slug === this.$route.params.id)
+  },
 }
 </script>
 

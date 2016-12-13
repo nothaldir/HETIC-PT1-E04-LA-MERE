@@ -3,17 +3,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const state = {
-  counter: 1,
-}
-
-const mutations = {}
-
-const getters = {}
-
 export default new Vuex.Store({
-  state,
-  mutations,
-  getters,
-  actions: {},
+  state: {
+    chapter: 1,
+  },
+  mutations: {
+    changeChapter(state, { n }) {
+      /* eslint-disable no-param-reassign */
+      state.chapter = n
+    },
+  },
+  actions: {
+    increment: ({ commit }) => commit('increment'),
+  },
 })

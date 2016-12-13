@@ -1,9 +1,7 @@
 <template>
   <nav class="nav-bar">
     <router-link class="link" to="/">Homepage</router-link>
-    <router-link class="link" to="/Bar">Bar</router-link>
     <router-link class="link" to="/Testimonials">Testimonials</router-link>
-    <router-link class="link" to="/Testimonial">Testimonial | Dorian</router-link>
   </nav>
 </template>
 
@@ -22,9 +20,10 @@ export default {
   width: 100vw;
   .link {
     text-decoration: none;
+    user-select: none;
     color: black;
     margin-left: 1rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
     transition: all .3s ease;
     &:hover {
       opacity: .4;
