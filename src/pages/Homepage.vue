@@ -1,25 +1,26 @@
 <template>
   <div class="homepage">
     <h1>Homepage</h1>
-    <div>{{ $store.state.chapter }} / {{ chaptersCount }}</div>
-    <Timeline v-bind:length="chaptersCount" v-bind:count="$store.state.chapter" age="3 mois" class="timeline"/>
+    <div>{{ $store.state.chapter }} / {{ chapters.length }}</div>
+    <Timeline v-bind:length="chapters.length" v-bind:count="$store.state.chapter" v-bind:age="chapters[$store.state.chapter - 1].title" class="timeline"/>
   </div>
 </template>
 
 <script>
-import store from '../store'
 import Timeline from '../components/Timeline'
+import chapters from '../data/chapters.json'
+
+console.log(chapters)
 
 export default {
   name: 'homepage',
-  store,
   head: {
     title: {
       inner: 'HomePage',
     },
   },
   data: () => ({
-    chaptersCount: 7,
+    chapters,
   }),
   components: {
     Timeline,

@@ -4,14 +4,17 @@
       Votre enfant a:<br>
       <strong>{{ age }}</strong>
     </h3>
-    <div class="bars">
-      <div class="bar" v-for="n in length" :class="[n > count ? '' : 'active']" v-on:click="changeChapter(n)"></div>
+    <div class="bars" id="montrera">
+      <div class="bar" v-for="n in length" v-on:click="changeChapter(n)">
+        <div class="line" :class="[n > count ? '' : 'active']"></div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
+/* eslint-disable no-undef */
+console.log(document.querySelector('#montrera'))
 export default {
   name: 'timeline',
   props: ['length', 'count', 'age'],
@@ -52,10 +55,17 @@ export default {
     max-width: 60rem;
   }
   .bar {
-    height: .2rem;
-    background-color: #393939;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     margin: 0 .3rem;
     flex-grow: 1;
+  }
+  .line {
+    background-color: #393939;
+    height: .2rem;
+    transition: all .2s ease-out;
   }
   .active {
     background-color: white;
