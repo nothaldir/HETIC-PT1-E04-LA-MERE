@@ -1,20 +1,14 @@
 [
   {
-    "title" : "3 mois"
+    "title" : "3 mois",
+    "time" : 0,
+    "from": 3,
+    "to": 12
   },
   {
-    "title" : "9 mois"
-  },
-  {
-    "title" : "1 an"
-  },
-  {
-    "title" : "4 ans"
-  },
-  {
-    "title" : "6 ans"
-  },
-  {
-    "title" : "10 ans"
+    "title" : "9 mois",
+    "time" : 20,
+    "from": 23,
+    "to": 29
   }
 ]

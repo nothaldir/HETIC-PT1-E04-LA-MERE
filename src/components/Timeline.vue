@@ -13,8 +13,6 @@
 </template>
 
 <script>
-/* eslint-disable no-undef */
-console.log(document.querySelector('#montrera'))
 export default {
   name: 'timeline',
   props: ['length', 'count', 'age'],
@@ -61,6 +59,9 @@ export default {
     height: 100%;
     margin: 0 .3rem;
     flex-grow: 1;
+    &:hover .line {
+      background-color: $primary-color;
+    }
   }
   .line {
     background-color: #393939;

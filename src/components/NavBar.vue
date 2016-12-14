@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav-bar">
+  <nav class="nav-bar" v-if="$route.path !== '/'">
     <router-link class="link" to="/">Homepage</router-link>
     <router-link class="link" to="/testimonials">Testimonials</router-link>
   </nav>
