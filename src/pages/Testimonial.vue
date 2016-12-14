@@ -1,17 +1,20 @@
 <template>
   <div class="testimonial">
-    <div class="testimonial-title testimonial-infos">Témoignage</div>
-    <div class="testimonial-infos">{{ couple.name }}</div>
-    <div class="testimonial-infos">{{ couple.location }}</div>
+      <div class="video-test">
+        <div class="testimonial-title testimonial-infos">Témoignage</div>
+        <div class="testimonial-infos">{{ couple.name }}</div>
+        <div class="testimonial-infos">{{ couple.location }}</div>
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_zPlr-o-YEQ?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
     <div class="testimonial__text">
-      <div class="testimonial-subtitle">Leur histoire</div>
+      <div class="testimonial-subtitle testimonial-subtitle-special">Leur histoire</div>
       <p class="paragraphe">{{ couple.history1 }}</p>
       <p class="paragraphe">{{ couple.history2 }}</p>
       <div class="quote">
-        <div class="quote-bar"></div>
-        <div class="quote-text">{{ couple.quote1 }}</div>
-      </div>
-      <p class="paragraphe">{{ couple.history3 }}</p>
+      <div class="quote-bar"></div>
+      <div class="quote-text">{{ couple.quote1 }}</div>
+    </div>
+    <p class="paragraphe">{{ couple.history3 }}</p>
   </div>
   <div class="testimonial-bar">
     <div class="testimonial-infos testimonial-bar-text">L'homoparentalité <div>en {{ couple.location }}</div></div>
@@ -52,8 +55,24 @@ export default {
 <style lang="scss">
 @import '../variables.scss';
 
+  .video-test {
+    position: absolute;
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    margin: 20px;
+  }
+
   .testimonial {
     text-align: initial;
+    width: 100%;
+    height: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    display: block;
   }
 
   .paragraphe {
@@ -78,6 +97,7 @@ export default {
 
   .testimonial-infos {
     text-transform: uppercase;
+    opacity: 1;
   }
 
   .testimonial-subtitle {
@@ -86,8 +106,12 @@ export default {
     color: $primary-color;
   }
 
+  .testimonial-subtitle-special {
+    margin-top: 20px;
+  }
+
   .testimonial__text {
-    max-width: 56rem;
+    max-width: 32rem;
     margin: auto;
   }
 
