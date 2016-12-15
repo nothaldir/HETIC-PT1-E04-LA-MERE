@@ -5,7 +5,7 @@
       <strong>{{ age }}</strong>
     </h3>
     <div class="bars">
-      <div class="bar" v-for="n in length" v-on:click="changeChapter(n)">
+      <div class="bar" v-for="n in length">
         <div class="line" :class="[n > count ? '' : 'active']"></div>
       </div>
     </div>
@@ -63,9 +63,6 @@ export default {
     height: 100%;
     margin: 0 .3rem;
     flex-grow: 1;
-    &:hover .line {
-      background-color: $primary-color;
-    }
   }
   .line {
     background-color: #393939;
