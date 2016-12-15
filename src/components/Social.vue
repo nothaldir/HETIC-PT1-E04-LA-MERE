@@ -1,4 +1,5 @@
 <template>
+  <div class="social">
   <!-- Sharingbutton Facebook -->
   <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fadrienmenegaux.com%2F" target="_blank" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -22,6 +23,7 @@
       </div>
     </div>
   </a>
+</div>
 </template>
 
 <script>
@@ -32,6 +34,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.social {
+  display: flex;
+  margin: 2rem 0;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
   display: inline-block
