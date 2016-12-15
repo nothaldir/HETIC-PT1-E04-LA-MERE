@@ -33,10 +33,16 @@
         <p v-html="couple.date4" class="paragraphe"></p>
       <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
     </div>
+    <div class="similars">
+      <router-link class="link" v-for="couple in similars" v-bind:to="'/testimonials/' + couple.slug">
+        <Card class="couple" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
+      </router-link>
+    </div>
   </div>
 </template>
 <script>
 import couples from '../data/couples.json'
+import Card from '../components/Card'
 
 // console.log(this)
 export default {
@@ -46,8 +52,20 @@ export default {
       inner: 'Testimonial',
     },
   },
+  components: {
+    Card,
+  },
+  data: () => ({
+    index: 0,
+    couple: {},
+    similars: [],
+  }),
   created() {
-    this.couple = couples.find(item => item.slug === this.$route.params.id)
+    this.index = couples.findIndex(item => item.slug === this.$route.params.id)
+    this.couple = couples[this.index]
+    for (let i = 1; i < 4; i += 1) {
+      this.similars.push(couples[(this.index + i) % couples.length])
+    }
   },
 }
 </script>
@@ -133,5 +151,14 @@ export default {
 
   .quote-special {
     margin-top: 20px;
+  }
+  .similars {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .link {
+      text-decoration: none;
+      transform: scale(.8);
+    }
   }
 </style>

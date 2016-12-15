@@ -42,12 +42,15 @@ export default {
     background-color: $primary-color;
     text-align: left;
     padding: 0.8rem;
+    text-decoration: none;
   }
   .title {
     color: red;
     color: white;
+    text-decoration: none;
   }
   .subtitle {
     color: white;
+    text-decoration: none;
   }
 </style>
