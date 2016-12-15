@@ -139,7 +139,7 @@ export default {
 
   .quote-bar {
     height: 40px;
-    width: 6px;
+    min-width: 6px;
     background-color: $primary-color;
   }
 
