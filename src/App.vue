@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <NavBar />
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -18,7 +20,12 @@ export default {
 
 <style lang="scss">
   @import 'reset.scss';
-
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

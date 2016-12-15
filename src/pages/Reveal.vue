@@ -29,7 +29,7 @@
       </a>
     </div>
     <div class="reveal-bar"></div>
-    <router-link class="link" to="/testimonials/">
+    <router-link class="link" to="/testimonials">
       <div class="btn">
         <div class="btn-text">Découvrir les témoignages</div>
       </div>
