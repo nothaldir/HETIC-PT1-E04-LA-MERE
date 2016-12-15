@@ -29,9 +29,11 @@
       </a>
     </div>
     <div class="reveal-bar"></div>
-    <div class="btn">
-      <div class="btn-text">Découvrir les témoignages</div>
-    </div>
+    <router-link class="link" to="/testimonials/">
+      <div class="btn">
+        <div class="btn-text">Découvrir les témoignages</div>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -48,6 +50,14 @@ export default {
 
 <style scoped lang="scss">
 @import '../variables.scss';
+
+.link {
+  text-decoration: none;
+  transition: all .3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s

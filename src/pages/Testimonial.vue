@@ -32,7 +32,7 @@
         <p v-html="couple.date3" class="paragraphe"></p>
         <p v-html="couple.date4" class="paragraphe"></p>
         <Social/>
-        <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
+        <div class="testimonial-subtitle testimonial-subtitle-final">Découvrir d'autres témoignages</div>
     </div>
     <div class="similars">
       <router-link class="link" v-for="couple in similars" v-bind:to="'/testimonials/' + couple.slug">
@@ -145,6 +145,10 @@ export default {
 
   .testimonial-subtitle-special {
     margin-top: 20px;
+  }
+
+  .testimonial-subtitle-final {
+    text-align: center;
   }
 
   .testimonial__text {
