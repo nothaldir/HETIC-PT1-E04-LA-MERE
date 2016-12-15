@@ -5,7 +5,7 @@
         <div class="testimonial-infos">{{ couple.name }}</div>
         <div class="testimonial-infos">{{ couple.location }}</div>
       </div>
-      <iframe width="560" height="315" v-bind:src="couple.video" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" v-bind:src="couple.video + '?showinfo=0&iv_load_policy=3&controls=0'" frameborder="0" allowfullscreen></iframe>
     <div class="testimonial__text">
       <div class="testimonial-subtitle testimonial-subtitle-special">Leur histoire</div>
       <p class="paragraphe">{{ couple.history1 }}</p>
@@ -75,27 +75,30 @@ export default {
 
   .video-test {
     position: absolute;
-    width: 100%;
     font-size: 2em;
     color: white;
-    margin: 20px;
+    padding: 20px;
   }
 
   .testimonial {
     text-align: initial;
-    width: 100%;
+    width: calc(100vw - 30px);
     height: 100%;
+    margin: auto;
   }
 
   iframe {
     width: 100%;
-    height: 500px;
     display: block;
+    height: 100vw;
+    @include respond-to(50rem) {
+      height: 600px;
+    }
   }
 
   .paragraphe {
     margin: 20px 0;
-    line-height: 150%;
+    line-height: 140%;
   }
 
   .testimonial-title {
@@ -111,8 +114,9 @@ export default {
     text-align:center;
     color: white;
     font-weight: bolder;
-    padding: 15px 0;
-    font-size: 1.2rem;
+    padding: 20px 0;
+    font-size: 1.4rem;
+    line-height: 140%;
   }
 
   .testimonial-infos {
@@ -124,7 +128,7 @@ export default {
     text-transform: uppercase;
     font-weight: bolder;
     color: $primary-color;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .testimonial-subtitle-special {
@@ -132,7 +136,7 @@ export default {
   }
 
   .testimonial__text {
-    max-width: 32rem;
+    max-width: 34rem;
     margin: auto;
   }
 
@@ -142,7 +146,7 @@ export default {
 
   .quote-bar {
     min-height: 40px;
-    max-height: 60px;
+    max-height: 80px;
     min-width: 6px;
     background-color: $primary-color;
   }
@@ -152,6 +156,7 @@ export default {
     padding-left: 10px;
     font-style: italic;
     font-size: 1.1rem;
+    line-height: 140%;
   }
 
   .quote-special {
