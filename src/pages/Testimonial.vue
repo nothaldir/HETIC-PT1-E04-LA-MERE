@@ -67,6 +67,16 @@ export default {
       this.similars.push(couples[(this.index + i) % couples.length])
     }
   },
+  mounted() {
+    /* eslint-disable */
+    var similar = document.querySelectorAll('.similars a');
+    for(var i = 0; i<similar.length; i++) {
+      similar[i].addEventListener('click', function(){
+        var id = this.getAttribute('href');
+        window.location.href = id;
+      });
+    }
+  },
 }
 </script>
 
