@@ -1,45 +1,47 @@
 <template>
   <div class="testimonial">
-      <div class="video-test">
-        <div class="testimonial-title testimonial-infos">Témoignage</div>
-        <div class="testimonial-infos">{{ couple.name }}</div>
-        <div class="testimonial-infos">{{ couple.location }}</div>
+    <div class="video-overlay">
+      <div class="testimonial-title testimonial-infos">Témoignage</div>
+      <div class="testimonial-infos">{{ couple.name }}</div>
+      <div class="testimonial-infos">{{ couple.location }}</div>
+    </div>
+    <iframe width="560" height="315" v-bind:src="couple.video + '?showinfo=0&iv_load_policy=3&controls=0'" frameborder="0" allowfullscreen></iframe>
+    <div class="testimonal__content">
+      <div class="testimonial__text">
+        <div class="testimonial-subtitle testimonial-subtitle-special">Leur histoire</div>
+          <p class="paragraphe">{{ couple.history1 }}</p>
+          <p class="paragraphe">{{ couple.history2 }}</p>
+          <div class="quote">
+            <div class="quote-bar"></div>
+            <div class="quote-text">{{ couple.quote1 }}</div>
+          </div>
+          <p class="paragraphe">{{ couple.history3 }}</p>
+        </div>
+        <div class="testimonial-bar">
+          <div class="testimonial-infos testimonial-bar-text">L'homoparentalité <div>en {{ couple.location }}</div></div>
+        </div>
+        <div class="testimonial__text">
+          <div class="testimonial-subtitle">Les chiffres</div>
+          <div class="quote quote-special">
+            <div class="quote-bar"></div>
+            <div class="quote-text">{{ couple.quote2 }}</div>
+          </div>
+          <p v-html="couple.numbers" class="paragraphe"></p>
+          <div class="testimonial-subtitle">Les lois</div>
+          <p v-html="couple.date1" class="paragraphe"></p>
+          <p v-html="couple.date2" class="paragraphe"></p>
+          <p v-html="couple.date3" class="paragraphe"></p>
+          <p v-html="couple.date4" class="paragraphe"></p>
+          <Social/>
+          <div class="testimonial-subtitle testimonial-subtitle-final">Découvrir d'autres témoignages</div>
+        </div>
+        <div class="similars">
+          <router-link class="link" v-for="couple in similars" v-bind:to="'/testimonials/' + couple.slug">
+            <Card class="couple" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
+          </router-link>
+        </div>
       </div>
-      <iframe width="560" height="315" v-bind:src="couple.video + '?showinfo=0&iv_load_policy=3&controls=0'" frameborder="0" allowfullscreen></iframe>
-    <div class="testimonial__text">
-      <div class="testimonial-subtitle testimonial-subtitle-special">Leur histoire</div>
-      <p class="paragraphe">{{ couple.history1 }}</p>
-      <p class="paragraphe">{{ couple.history2 }}</p>
-      <div class="quote">
-      <div class="quote-bar"></div>
-      <div class="quote-text">{{ couple.quote1 }}</div>
     </div>
-    <p class="paragraphe">{{ couple.history3 }}</p>
-  </div>
-  <div class="testimonial-bar">
-    <div class="testimonial-infos testimonial-bar-text">L'homoparentalité <div>en {{ couple.location }}</div></div>
-  </div>
-    <div class="testimonial__text">
-      <div class="testimonial-subtitle">Les chiffres</div>
-      <div class="quote quote-special">
-        <div class="quote-bar"></div>
-        <div class="quote-text">{{ couple.quote2 }}</div>
-      </div>
-      <p v-html="couple.numbers" class="paragraphe"></p>
-      <div class="testimonial-subtitle">Les lois</div>
-        <p v-html="couple.date1" class="paragraphe"></p>
-        <p v-html="couple.date2" class="paragraphe"></p>
-        <p v-html="couple.date3" class="paragraphe"></p>
-        <p v-html="couple.date4" class="paragraphe"></p>
-        <Social/>
-        <div class="testimonial-subtitle testimonial-subtitle-final">Découvrir d'autres témoignages</div>
-    </div>
-    <div class="similars">
-      <router-link class="link" v-for="couple in similars" v-bind:to="'/testimonials/' + couple.slug">
-        <Card class="couple" :title="couple.name" :subtitle="couple.location" :img="couple.img"/>
-      </router-link>
-    </div>
-  </div>
 </template>
 <script>
 import couples from '../data/couples.json'
@@ -85,7 +87,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../variables.scss';
-  .video-test {
+  .video-overlay {
     position: absolute;
     font-size: 2em;
     color: white;
@@ -94,7 +96,6 @@ export default {
 
   .testimonial {
     text-align: initial;
-    width: calc(100vw - 30px);
     height: 100%;
     margin: auto;
   }
@@ -106,6 +107,10 @@ export default {
     @include respond-to(50rem) {
       height: 600px;
     }
+  }
+
+  .testimonal__content {
+    padding: 20px;
   }
 
   .paragraphe {
@@ -162,7 +167,7 @@ export default {
 
   .quote-bar {
     min-height: 40px;
-    max-height: 80px;
+    max-height: 100%;
     min-width: 6px;
     background-color: $primary-color;
   }
