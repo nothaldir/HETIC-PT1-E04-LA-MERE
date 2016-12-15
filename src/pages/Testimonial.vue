@@ -5,7 +5,7 @@
         <div class="testimonial-infos">{{ couple.name }}</div>
         <div class="testimonial-infos">{{ couple.location }}</div>
       </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/_zPlr-o-YEQ?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" v-bind:src="couple.video" frameborder="0" allowfullscreen></iframe>
     <div class="testimonial__text">
       <div class="testimonial-subtitle testimonial-subtitle-special">Leur histoire</div>
       <p class="paragraphe">{{ couple.history1 }}</p>
@@ -95,6 +95,7 @@ export default {
 
   .paragraphe {
     margin: 20px 0;
+    line-height: 150%;
   }
 
   .testimonial-title {
@@ -111,6 +112,7 @@ export default {
     color: white;
     font-weight: bolder;
     padding: 15px 0;
+    font-size: 1.2rem;
   }
 
   .testimonial-infos {
@@ -122,6 +124,7 @@ export default {
     text-transform: uppercase;
     font-weight: bolder;
     color: $primary-color;
+    font-size: 1.2rem;
   }
 
   .testimonial-subtitle-special {
@@ -138,7 +141,8 @@ export default {
   }
 
   .quote-bar {
-    height: 40px;
+    min-height: 40px;
+    max-height: 60px;
     min-width: 6px;
     background-color: $primary-color;
   }
@@ -147,6 +151,7 @@ export default {
     margin: auto 0;
     padding-left: 10px;
     font-style: italic;
+    font-size: 1.1rem;
   }
 
   .quote-special {
