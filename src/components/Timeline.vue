@@ -4,11 +4,14 @@
       Votre enfant a:<br>
       <strong>{{ age }}</strong>
     </h3>
-    <div class="bars" id="montrera">
+    <div class="bars">
       <div class="bar" v-for="n in length" v-on:click="changeChapter(n)">
         <div class="line" :class="[n > count ? '' : 'active']"></div>
       </div>
     </div>
+    <router-link class="link" to="/reveal">
+      <h3>PASSER<br>L'EXPERIENCE</h3>
+    </router-link>
   </div>
 </template>
 
@@ -38,6 +41,7 @@ export default {
   h3 {
     color: white;
     margin: .5rem 1rem;
+    text-align: center;
     strong {
       font-size: 2rem;
     }

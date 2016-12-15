@@ -1,7 +1,8 @@
 <template>
   <div class="experience">
-    <video src="http://vjs.zencdn.net/v/oceans.mp4" muted autoplay class="video">
+    <video src="http://adrienmenegaux.com/video/experience_video.mp4" muted autoplay class="video">
     </video>
+    <audio src="http://adrienmenegaux.com/sound/castle_in_the_sky_theme_%20joe_hisaishi.mp3" autoplay></audio>
     <div class="circleContainer" :style="{opacity: dragShow ? 1 : 0}">
       <div class="landingZone" :class="{ grow: onTarget}"></div>
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="rail">
