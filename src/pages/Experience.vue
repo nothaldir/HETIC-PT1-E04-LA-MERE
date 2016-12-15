@@ -2,7 +2,7 @@
   <div class="experience">
     <video src="http://adrienmenegaux.com/video/experience_video.mp4" muted autoplay class="video">
     </video>
-    <audio src="http://adrienmenegaux.com/sound/castle_in_the_sky_theme_%20joe_hisaishi.mp3" autoplay></audio>
+    <audio src="http://adrienmenegaux.com/sound/castle_in_the_sky_theme_%20joe_hisaishi.mp3" autoplay loop></audio>
     <div class="circleContainer" :style="{opacity: dragShow ? 1 : 0}">
       <div class="landingZone" :class="{ grow: onTarget}"></div>
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="rail">
@@ -77,6 +77,16 @@ export default {
           ((-2 * this.angle * (this.dragRange.to - this.dragRange.from))
           / Math.PI))
       }
+      if (this.angle > 0) {
+        this.angle = 0
+      }
+    },
+    grabbing() {
+      if (this.grabbing) {
+        this.video.removeEventListener('timeupdate', this.ontimeupdate)
+      } else {
+        this.video.addEventListener('timeupdate', this.ontimeupdate)
+      }
     },
   },
   methods: {
@@ -143,7 +153,14 @@ export default {
     },
     // Drag effect over the video
     scratchVideo(at) {
-      this.video.currentTime = at
+      if (this.video.play()) {
+        this.video.play().then(() => {
+          this.video.currentTime = at
+          this.video.pause()
+        })
+      } else {
+        this.video.currentTime = at
+      }
     },
     resetDrag() {
       // Reset all values
@@ -157,8 +174,7 @@ export default {
   mounted() {
     this.video = this.$el.querySelector('video')
     const video = this.video
-    // Chnage chapter at specific moment
-    video.addEventListener('timeupdate', () => {
+    this.ontimeupdate = () => {
       chapters.forEach((chapter, index) => {
         // Wait till a new stop comes
         if (Math.floor(video.currentTime) === chapter.from) {
@@ -172,7 +188,9 @@ export default {
           this.changeChapter(index + 1)
         }
       })
-    })
+    }
+    // Chnage chapter at specific moment
+    video.addEventListener('timeupdate', this.ontimeupdate)
     // When video ends, redirect to next page
     video.onended = () => {
       this.$router.push('/reveal')
@@ -213,7 +231,7 @@ export default {
   width: 20rem;
   height: 20rem;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 9rem;
   transition: .2s ease-in;
 }
 .circle {

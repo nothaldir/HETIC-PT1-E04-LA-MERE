@@ -31,7 +31,7 @@
         <p v-html="couple.date2" class="paragraphe"></p>
         <p v-html="couple.date3" class="paragraphe"></p>
         <p v-html="couple.date4" class="paragraphe"></p>
-        <Social/>
+        <Social />
       <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
     </div>
     <div class="similars">
