@@ -1,14 +1,38 @@
 [
   {
-    "title" : "3 mois",
+    "title" : "8 mois",
     "time" : 0,
-    "from": 3,
-    "to": 12
+    "from": 12,
+    "to": 17
   },
   {
     "title" : "9 mois",
-    "time" : 20,
-    "from": 23,
-    "to": 29
-  }
+    "time" : 28,
+    "from": 30,
+    "to": 37
+  },
+  {
+    "title" : "3 ans",
+    "time" : 44,
+    "from": 48,
+    "to": 50
+  },
+  {
+  "title" : "4 ans",
+  "time" : 54,
+  "from": 72,
+  "to": 74
+  },
+  {
+  "title" : "6 ans",
+  "time" : 90,
+  "from": 105,
+  "to": 111
+},
+{
+"title" : "7 ans",
+"time" : 118,
+"from": 119,
+"to": 111
+}
 ]
