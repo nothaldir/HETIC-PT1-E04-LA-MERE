@@ -95,6 +95,7 @@ export default {
 
   .paragraphe {
     margin: 20px 0;
+    line-height: 150%;
   }
 
   .testimonial-title {
@@ -111,6 +112,7 @@ export default {
     color: white;
     font-weight: bolder;
     padding: 15px 0;
+    font-size: 1.2rem;
   }
 
   .testimonial-infos {
@@ -122,6 +124,7 @@ export default {
     text-transform: uppercase;
     font-weight: bolder;
     color: $primary-color;
+    font-size: 1.2rem;
   }
 
   .testimonial-subtitle-special {
@@ -138,7 +141,8 @@ export default {
   }
 
   .quote-bar {
-    height: 40px;
+    min-height: 40px;
+    max-height: 60px;
     min-width: 6px;
     background-color: $primary-color;
   }
@@ -147,6 +151,7 @@ export default {
     margin: auto 0;
     padding-left: 10px;
     font-style: italic;
+    font-size: 1.1rem;
   }
 
   .quote-special {

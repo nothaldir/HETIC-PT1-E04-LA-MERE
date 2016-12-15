@@ -88,9 +88,9 @@ export default {
     grab(e) {
       if (this.grabbed === false) {
         // Initiate the starting point
-        if (e.x) {
-          this.mouse.start.x = e.x
-          this.mouse.start.y = e.y
+        if (e.clientX || e.clientY) {
+          this.mouse.start.x = e.clientX
+          this.mouse.start.y = e.clientY
         } else {
           this.mouse.start.y = e.changedTouches[0].pageY
           this.mouse.start.x = e.changedTouches[0].pageX
@@ -128,9 +128,9 @@ export default {
         this.angle = Math.asin(this.mouseOffsetY / this.circleContainerWidth)
       }
       // Set the current mouse position in realtime aka while the mouse is moving
-      if (e.y || e.x) {
-        this.mouse.current.y = e.y
-        this.mouse.current.x = e.x
+      if (e.clientY || e.clientX) {
+        this.mouse.current.y = e.clientY
+        this.mouse.current.x = e.clientX
       } else {
         this.mouse.current.y = e.changedTouches[0].pageY
         this.mouse.current.x = e.changedTouches[0].pageX
@@ -161,7 +161,6 @@ export default {
       chapters.forEach((chapter, index) => {
         // Wait till a new stop comes
         if (Math.floor(video.currentTime) === chapter.from) {
-          console.log('chapter from')
           this.pauseVideo()
           this.dragRange.from = chapter.from
           this.dragRange.to = chapter.to
