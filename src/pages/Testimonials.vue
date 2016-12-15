@@ -36,11 +36,10 @@ export default {
   @import '../variables.scss';
 
   h1 {
-    width: 100%;
     height: 100px;
     margin: auto;
     margin-top: 40px;
-    width: 36rem;
+    max-width: 36rem;
     font-size: 26px;
     color: $primary-color;
     text-align: center;

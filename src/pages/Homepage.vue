@@ -62,6 +62,7 @@ h1 {
   text-decoration: none;
   color: white;
   transition: all .1s ease-in;
+  text-align: center;
   &:hover {
     transform: scale(1.03);
   }

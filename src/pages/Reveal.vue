@@ -82,7 +82,6 @@ export default {
   width: 100vw;
   color: white;
   text-align: center;
-  padding: 15px;
 }
 
 .reveal-final {
