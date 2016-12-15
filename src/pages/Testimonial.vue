@@ -5,7 +5,7 @@
         <div class="testimonial-infos">{{ couple.name }}</div>
         <div class="testimonial-infos">{{ couple.location }}</div>
       </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/_zPlr-o-YEQ?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" v-bind:src="couple.video" frameborder="0" allowfullscreen></iframe>
     <div class="testimonial__text">
       <div class="testimonial-subtitle testimonial-subtitle-special">Leur histoire</div>
       <p class="paragraphe">{{ couple.history1 }}</p>
