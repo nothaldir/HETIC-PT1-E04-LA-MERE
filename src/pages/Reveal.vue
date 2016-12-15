@@ -2,7 +2,7 @@
   <div class="reveal">
     <h1 class="reveal-final">Une mère n’est pas forcément une femme.</h1>
     <h2 class="reveal-second">Lors de cette expérience, vous avez incarné un membre d'un couple homoparental</h2>
-    <p class="reveal-partage">Cette expérience vous a plu ? Partagez là !</p>
+    <p class="reveal-partage">Elle vous a plu ? Partagez là !</p>
     <div class="social">
   <!-- Sharingbutton Facebook -->
       <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fadrienmenegaux.com%2F" target="_blank" aria-label="">
@@ -57,17 +57,26 @@ export default {
 }
 
 .reveal {
+  position: fixed;
   display: flex;
+  top: 0;
+  left: 0;
+  z-index: -1;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  background-image: url('../assets/homepage_cover.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: white;
   text-align: center;
   padding: 15px;
 }
 
 .reveal-final {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .reveal-second {
@@ -96,6 +105,7 @@ h1 {
 
 .btn-text {
   color: white;
+  font-size: 1.3rem;
   padding: 20px 30px;
 }
 
