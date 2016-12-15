@@ -47,10 +47,12 @@ export default {
   .title {
     color: red;
     color: white;
+    font-size: 24px;
     text-decoration: none;
   }
   .subtitle {
     color: white;
+    font-size: 20px;
     text-decoration: none;
   }
 </style>
