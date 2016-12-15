@@ -28,6 +28,10 @@ export default {
     max-width: 20rem;
     position: relative;
     margin: 1.5rem;
+    transition: all .1s ease-in;
+    &:hover {
+      transform: scale(1.03);
+    }
   }
   .cover {
     background-size: cover;

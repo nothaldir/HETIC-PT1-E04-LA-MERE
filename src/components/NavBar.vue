@@ -1,7 +1,8 @@
 <template>
-  <nav class="nav-bar" v-if="$route.path !== '/'">
-    <router-link class="link" to="/">Homepage</router-link>
-    <router-link class="link" to="/testimonials">Testimonials</router-link>
+  <nav class="nav-bar" v-if="$route.path !== '/experience'">
+    <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/">Accueil</router-link>
+    <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/experience">Expérience</router-link>
+    <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/testimonials">Témoignages</router-link>
   </nav>
 </template>
 
@@ -22,6 +23,7 @@ export default {
     text-decoration: none;
     user-select: none;
     color: black;
+    font-size: 1.0625rem;
     margin-left: 1rem;
     padding: 2rem 0;
     transition: all .3s ease;
