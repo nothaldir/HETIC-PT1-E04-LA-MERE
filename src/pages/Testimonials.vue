@@ -43,6 +43,7 @@ export default {
     width: 36rem;
     font-size: 26px;
     color: $primary-color;
+    text-align: center;
   }
   .link {
     text-decoration: none;

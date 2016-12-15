@@ -1,9 +1,8 @@
 <template>
   <div class="homepage">
-    <h1>MAGNA<br>MATTER</h1>
+    <h1>MAGNA<br>MATER</h1>
     <router-link class="button" to="/experience">Démarrer l’expérience</router-link>
-    <p class="description">« phrase poignante sur le rôle d’une mère tu vois l’idée
-      et qui pourrait défiler si on en met plusieurs »
+    <p class="description">« Un rôle est quelque chose d’extérieur à soi, que l’on "joue" et que n’importe qui peut incarner.»
     </p>
   </div>
 </template>
@@ -48,6 +47,7 @@ h1 {
   font-size: 4rem;
   user-select: none;
   cursor: default;
+  text-align: center;
 }
 .button {
   padding: 2rem 4rem;
