@@ -31,6 +31,7 @@
         <p v-html="couple.date2" class="paragraphe"></p>
         <p v-html="couple.date3" class="paragraphe"></p>
         <p v-html="couple.date4" class="paragraphe"></p>
+        <Social/>
       <div class="testimonial-subtitle">Découvrir d'autres témoignages</div>
     </div>
     <div class="similars">
@@ -43,6 +44,7 @@
 <script>
 import couples from '../data/couples.json'
 import Card from '../components/Card'
+import Social from '../components/Social'
 
 // console.log(this)
 export default {
@@ -54,6 +56,7 @@ export default {
   },
   components: {
     Card,
+    Social,
   },
   data: () => ({
     index: 0,
@@ -70,9 +73,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../variables.scss';
-
   .video-test {
     position: absolute;
     font-size: 2em;
