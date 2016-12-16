@@ -90,6 +90,8 @@ export default {
 
 .reveal-second {
   margin: 30px 0;
+  font-size: 23px;
+  line-height: 30px;
 }
 
 h1 {
