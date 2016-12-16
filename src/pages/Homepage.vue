@@ -1,9 +1,8 @@
 <template>
   <div class="homepage">
     <h1>MAGNA<br>MATER</h1>
-    <router-link class="button" to="/experience">Devenir Mère</router-link>
-    <p class="description">« Un rôle est quelque chose d’extérieur à soi, que
-      l’on "joue" et que n’importe qui peut incarner.»
+    <router-link class="button" to="/experience">Incarner une mère</router-link>
+    <p class="description">Lors de cette expérience, vous allez vivre le rôle d'une mère.
     </p>
   </div>
 </template>
