@@ -1,7 +1,7 @@
 <template>
   <div class="reveal">
     <h1 class="reveal-final">Une mère n’est pas forcément une femme.</h1>
-    <h2 class="reveal-second">Lors de cette expérience, vous avez incarné un membre d'un couple homoparental</h2>
+    <h2 class="reveal-second">Lors de cette expérience, vous avez incarné un membre d'un couple homoparental.<br>Le plus important aux yeux de l'enfant est l'amour que ses parents lui apportent.</h2>
     <p class="reveal-partage">Elle vous a plu ? Partagez là !</p>
     <div class="social">
   <!-- Sharingbutton Facebook -->
