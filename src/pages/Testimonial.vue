@@ -100,9 +100,11 @@ export default {
     /* eslint-disable */
     var similar = document.querySelectorAll('.similars a');
     for(var i = 0; i<similar.length; i++) {
-      similar[i].addEventListener('click', function(){
-        var id = this.getAttribute('href');
-        window.location.href = id;
+      similar[i].addEventListener('click', () => {
+        this.index = couples.findIndex(item => item.slug === this.$route.params.id)
+        this.couple = couples[this.index]
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
       });
     }
   },

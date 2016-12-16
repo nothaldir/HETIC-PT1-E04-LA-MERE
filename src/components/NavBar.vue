@@ -3,6 +3,7 @@
     <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/">Accueil</router-link>
     <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/experience">Expérience</router-link>
     <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/testimonials">Témoignages</router-link>
+    <router-link class="link" :style="{color: $route.path === '/' ? 'white' : ''}" to="/credits">Crédits</router-link>
   </nav>
 </template>
 
